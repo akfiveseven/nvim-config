@@ -1,2 +1,1 @@
-vim.opt.termguicolors = false
-require("bufferline").setup{}
+require("bufferline").setup()
