@@ -46,3 +46,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 -- search and replace globally the word the cursor is on
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+vim.keymap.set("n", "c", [["_c]])
+vim.keymap.set("n", "x", [["_x]])
+vim.keymap.set("n", "d", [["_d]])
+vim.keymap.set("n", "T", "zt")
