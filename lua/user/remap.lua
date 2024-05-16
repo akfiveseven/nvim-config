@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 
 -- My Remaps
 vim.keymap.set("n", "<leader>w", vim.cmd.w) -- save remap
+vim.keymap.set("n", "<leader>Q", vim.cmd.qall) -- save remap
 vim.keymap.set("n", "<leader>p", [["+p]]) -- pastes system clipboard after cursor
 vim.keymap.set("n", "<leader>P", [["+P]]) -- pastes system clipboard before cursor
 
@@ -9,8 +10,8 @@ vim.keymap.set("n", "<tab>", vim.cmd.bnext) -- next file in buffer
 vim.keymap.set("n", "<S-tab>", vim.cmd.bprev) -- previous file in buffer
 vim.keymap.set("n", "<leader>x", vim.cmd.bd) -- close current file in buffer
 
-vim.keymap.set("n", "<C-l>", "<C-w><right>")
-vim.keymap.set("n", "<C-h>", "<C-w><left>")
+--vim.keymap.set("n", "<C-l>", "<C-w><right>")
+--vim.keymap.set("n", "<C-h>", "<C-w><left>")
 
 
 -- ThePrimeagen's Remaps
@@ -38,7 +39,7 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- deletes without yanking
-vim.keymap.set({"n", "v"}, "<leader>dd", [["_d]])
+--vim.keymap.set({"n", "v"}, "<leader>dd", [["_d]])
 
 -- easy escape (to use if esc and capslock keys not swapped)
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -46,7 +47,19 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 -- search and replace globally the word the cursor is on
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-vim.keymap.set("n", "c", [["_c]])
+
+--vim.keymap.set({"n", "v"}, "d", [["_d]])
+--vim.keymap.set("n", "dd", [[dd]])
 vim.keymap.set("n", "x", [["_x]])
-vim.keymap.set("n", "d", [["_d]])
+vim.keymap.set("n", "c", [["_c]])
+vim.keymap.set("n", "cl", [["_c$]])
+vim.keymap.set("n", "dl", [["_d$]])
 vim.keymap.set("n", "T", "zt")
+
+vim.keymap.set("n", "gg", "magg")
+vim.keymap.set("n", "G", "maG")
+
+--vim.keymap.set("v", "<leader>d", "d")
+--vim.keymap.set("n", "<leader>dd", "dd")
+
+vim.keymap.set("n", "<leader>h", [[`]])
