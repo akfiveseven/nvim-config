@@ -1,6 +1,4 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
+require "nvchad.options"
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -28,4 +26,6 @@ vim.opt.signcolumn = "no"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
-vim.opt.colorcolumn = "80"
+--vim.opt.colorcolumn = "80"
+
+vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/lua_snippets"

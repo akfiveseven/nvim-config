@@ -1,3 +1,9 @@
+require "nvchad.mappings"
+
+
+vim.keymap.set("n", ";", ":", { desc = "CMD enter command mode" })
+--map("i", "jk", "<ESC>")
+
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
@@ -36,3 +42,4 @@ vim.keymap.set("n", "<leader>v", [["_d]])
 vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("n", "<leader>lsp", [[:lua vim.diagnostic.open_float(0, { scope = "line" })]])
+
