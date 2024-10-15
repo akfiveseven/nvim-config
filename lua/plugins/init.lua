@@ -35,11 +35,12 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "vim", "vimdoc", "javascript",
+        "vim", "javascript", "vimdoc",
         "html", "css", "cpp", "python"
       },
     },
   },
+
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
@@ -97,7 +98,7 @@ return {
       -- harpoon.ui:toggle_quick_menu(harpoon:list())
       -- end)
 
-      vim.keymap.set("n", "<leader>hh", function()
+      vim.keymap.set("n", "<C-t>", function()
         harpoon:list():select(1)
       end)
 
@@ -126,6 +127,7 @@ return {
       end)
     end,
   },
+
   {
     "stevearc/aerial.nvim",
     opts = {},
@@ -170,24 +172,24 @@ return {
       vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
     end,
   },
-  -- {
-  --   "christoomey/vim-tmux-navigator",
-  --   lazy = false,
-  --   cmd = {
-  --     "TmuxNavigateLeft",
-  --     "TmuxNavigateDown",
-  --     "TmuxNavigateUp",
-  --     "TmuxNavigateRight",
-  --     "TmuxNavigatePrevious",
-  --   },
-  --   keys = {
-  --     { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-  --     { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-  --     { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-  --     { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-  --     { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
-  --   },
-  -- },
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
+    },
+    keys = {
+      { "<c-h>", "<cmd>TmuxNavigateLeft<cr>" },
+      { "<c-j>", "<cmd>TmuxNavigateDown<cr>" },
+      { "<c-k>", "<cmd>TmuxNavigateUp<cr>" },
+      { "<c-l>", "<cmd>TmuxNavigateRight<cr>" },
+      { "<c-\\>", "<cmd>TmuxNavigatePrevious<cr>" },
+    },
+  },
   {
     "xiyaowong/transparent.nvim",
     lazy = false,
@@ -279,5 +281,10 @@ return {
 
       return opts
     end,
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    lazy = false,
+    opts = {},
   }
 }
