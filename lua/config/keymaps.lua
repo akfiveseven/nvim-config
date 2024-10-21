@@ -1,6 +1,3 @@
-require "nvchad.mappings"
-
-
 vim.keymap.set("n", ";", ":", { desc = "CMD enter command mode" })
 --map("i", "jk", "<ESC>")
 
